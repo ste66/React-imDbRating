@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+
+import React, { Component } from 'react'
+
+
+import Navbar from './Component/navbar';
+import Movies from './Component/movies';
+import Footer from './Component/footer';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
 
+  render() {
+    return (
+      <div className = "stella">
+        <Navbar mynavbar = "Top 250 as rated"/>
+
+        <Movies movie= "The Godfather" year= "1972" rating="9.1"/>
+        <Movies movie= "The Matrix" year= "1999" rating="8.6"/>
+        <Movies movie= "Untouchable" year= "2011" rating="8.4"/>
+        <Movies movie= "Joker" year= "2019" rating="8.6"/>
+        <Movies movie= "Jurassic Park" year= "1993" rating="8.1"/>
+
+        <Footer myfooter= "This Footer"/>
+      </div>
+    )
+  }
+}
 export default App;
